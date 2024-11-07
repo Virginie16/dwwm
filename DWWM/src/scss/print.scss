@@ -1,0 +1,23 @@
+#gnome {
+  display: none;
+}
+
+#atouts ol,
+#poi ul {
+  padding-left: 0;
+}
+
+#atouts li,
+#poi li {
+  display: inline-block;
+}
+
+#atouts li::after,
+#poi li::after {
+  content: ", ";
+}
+
+#atouts li:last-of-type::after,
+#poi li:last-of-type::after {
+  content: "";
+}

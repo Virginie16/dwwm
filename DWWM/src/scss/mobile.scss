@@ -1,0 +1,111 @@
+@use "partials/colors";
+@use "sass:color";
+
+html {
+  background: black;
+  color: colors.$secondary;
+}
+
+body {
+  background-color: colors.$secondary;
+  color: black;
+  font-family: "Caveat", cursive;
+  padding: 0;
+  margin: 1rem;
+  border-radius: 1em;
+}
+
+h1,
+h2,
+h3,
+p,
+dl,
+address {
+  padding: 1ex;
+}
+
+h1,
+h2,
+h3 {
+  background: linear-gradient(to right, colors.$primary, darken(colors.$primary, 20%));
+  color: colors.$tertiary;
+  text-shadow: 2px 2px 2px #333;
+  font-family: "Qwigley", cursive;
+  position: relative;
+  left: -1rem;
+  box-shadow: 1ex 1ex 1ex #333;
+}
+
+h1 {
+  border-radius: 0 2rem 2rem 0;
+  font-size: 2rem;
+}
+
+h2 {
+  border-radius: 0 1.5rem 1.5rem 0;
+  font-size: 1.5rem;
+}
+
+h3 {
+  border-radius: 0 1.2rem 1.2rem 0;
+  font-size: 1.2rem;
+}
+
+::-webkit-progress-bar,
+progress {
+  appearance: none;
+  height: 1em;
+  border-radius: 0.5em;
+}
+
+::-webkit-progress-bar {
+  background-color: white;
+}
+
+::-webkit-progress-value {
+  border-radius: 0.5em 0 0 0.5em;
+  background-color: colors.$tertiary;
+}
+
+img.polaroid {
+  display: block;
+  margin: auto;
+  border: 15px solid white;
+  border-bottom-width: 50px;
+  box-shadow: 1ex 1ex 1ex #333;
+  transform: rotate(-5deg);
+  filter: sepia(100%);
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+footer a {
+  display: block;
+}
+
+#experiences dt,
+#formation dt {
+  font-weight: bold;
+}
+
+@keyframes slidein {
+  from {
+    bottom: -100px;
+    right: -75px;
+  }
+  to {
+    bottom: -25px;
+    right: -50px;
+  }
+}
+
+#gnome {
+  position: fixed;
+  right: -50px;
+  bottom: -25px;
+  animation: 3s linear slidein;
+  transform: rotate(-45deg);
+}

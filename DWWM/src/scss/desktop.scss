@@ -1,0 +1,58 @@
+@media (min-width: 768px) {
+  body {
+    margin: auto;
+    max-width: 900px;
+    padding: 0;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "hd" "main" "ft";
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "co re" "ex fo" "at cp" "po cp";
+    gap: 1em;
+  }
+
+  header {
+    grid-area: hd;
+  }
+
+  footer {
+    grid-area: ft;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  #coordonnees {
+    grid-area: co;
+  }
+
+  #resume {
+    grid-area: re;
+  }
+
+  #atouts {
+    grid-area: at;
+  }
+
+  #experiences {
+    grid-area: ex;
+  }
+
+  #formation {
+    grid-area: fo;
+  }
+
+  #competences {
+    grid-area: cp;
+  }
+
+  #poi {
+    grid-area: po;
+  }
+}
